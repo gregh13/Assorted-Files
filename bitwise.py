@@ -1,6 +1,5 @@
 import random
 
-
 def most_sig_bit(n: int = 0):
     # Find the largest power of 2 that is less or equal to N
     while n & n-1:
@@ -21,13 +20,13 @@ random_list = [random.random() for i in range(test_size)]
 for power in power_list:
     for rando in random_list:
         num = int(rando * 10**power)
-        my_way = most_sig_bit(num)
+        sure_way = most_sig_bit(num)
         their_way = sig_bit_their_way(num)
-        if my_way != their_way:
+        if sure_way != their_way:
             error_count += 1
             # print("Power: ", power)
             # print("Number: ", num)
-            # print("   My way: ", my_way)
+            # print(" Sure way: ", my_way)
             # print("Their way: ", their_way)
             # print("Not equal")
             # print("-----------\n")
